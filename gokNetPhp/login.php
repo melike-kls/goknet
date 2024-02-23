@@ -9,17 +9,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM users WHERE email = '$email' AND sifre = '$password'";
     $result = mysqli_query($baglanti,$sql);
     
-    if ($result === false) {
-        // Handle query error
+    if ($result === false) { 
         die(mysqli_error($baglanti));
     }
     
     $count = mysqli_num_rows($result); 
     
     if($count == 1) { 
-        $_SESSION['login_user'] = $email; // Use $email instead of $myusername which is not defined
+        $_SESSION['login_user'] = $email; 
         header("location: dashboard.php");
-        exit(); // Ensure no further code execution after redirect
+        exit(); 
     } else {
         $error = "Your Login Name or Password is invalid";
     }
