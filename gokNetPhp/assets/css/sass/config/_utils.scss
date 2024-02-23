@@ -1,0 +1,79 @@
+$enable-negative-margins: true;
+$color_1: #b0b2b0;
+$color_2: #54bdd0;
+$color_3: #fff;
+$background-color_1: #54bdd0;
+$primary-dark:#384857;
+$gray-700: #495057; 
+$alternate:#1a26a2;
+$danger:#E1081E;
+$gold:#CA9E67;
+$pink:#EA868F;
+$teal-300:#bf777d;
+$brown:#906541;
+$gray-800:#202121;
+$gray-400:#f6f6f7; 
+$gray-100:#F8F9FA;  
+$red-400:#CB3C24;
+$white:#ffffff;
+$colors:(
+    // primary-dark:$primary-dark,
+    // gray-700:$gray-700, 
+    // danger:$danger,
+    // gold:$gold,
+    // pink:$pink,
+    // brown:$brown,
+    // teal-300:$teal-300
+    // gray-800:$gray-800,
+    // gray-400:$gray-400,
+    // gray-100:$gray-100,
+    // red-400:$red-400,
+    alternate:$alternate,
+    white:$white
+);
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+    .btn-#{$name} {
+        color:#ffffff;
+        border-color:$color;
+        background-color:$color;
+    }
+    
+    .btn-#{$name}{
+        @media screen and (min-width:991.98px) {
+            &:hover{
+                color:$color!important;
+                border-color:$color;
+                background-color:#ffffff!important;
+            }
+        }
+    }
+    .text-#{$name} {
+        color: $color!important;
+        p,a,span,ul,li{
+            color: $color!important;
+        }
+    }
+    .paragraph{
+        &.text-#{$name} {
+            color: $color!important;
+            p,a,span,ul,li{
+                color: $color!important;
+            }
+        }
+    }
+}
+.container-3xl{ 
+    max-width: 1546px;
+    width: 100%;
+    margin: 0 auto; 
+} 
+.container-2xl{ 
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto; 
+} 
+ 

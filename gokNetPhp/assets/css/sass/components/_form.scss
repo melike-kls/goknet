@@ -1,0 +1,203 @@
+form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &#paymentForm {
+        label {
+            color: #1a26a2;
+        }
+    }
+
+    label {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 300;
+
+        @media screen and (max-width:768px) {
+            font-size: 14px;
+        }
+    }
+
+    a {
+        color: #ffffff;
+        transition: all 0.3s linear;
+
+        @media screen and (min-width:992px) {
+            &:hover {
+                opacity: 0.5;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .invalid-tooltip {
+        position: relative !important;
+        top: auto;
+    }
+
+    .form-select,
+    input {
+        height: 40px;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+
+        &:focus,
+        &:focus-visible {
+            box-shadow: none !important;
+            border-color: #ced4da !important;
+            outline: 0 !important;
+        }
+    }
+
+    .form-select {
+        padding: 0 10px !important;
+
+    }
+}
+
+label {
+    @media screen and (max-width:768px) {
+        font-size: 14px;
+    }
+}
+
+.form-check-input {
+    cursor: pointer;
+
+    &:checked {
+        background-color: #1a26a2;
+        border-color: #1a26a2;
+        box-shadow: none;
+    }
+}
+
+.forgetPassword {
+    .forget-text {
+        font-size: 18px;
+    }
+
+    a {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    span {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+
+
+.progress-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-header {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width:1600px) {
+        overflow-x: auto;
+        max-width: 100%;
+    }
+}
+
+.header_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: $color_1;
+}
+
+.circle_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #b0b2b0;
+    border-radius: 50%;
+}
+
+.right-line {
+    width: 100px;
+    height: 0px;
+    border: 2px solid #b0b2b0;
+}
+
+.left-line {
+    width: 100px;
+    height: 0px;
+    border: 2px solid #b0b2b0;
+}
+
+.left-line-hidden {
+    width: 100px;
+    height: 0px;
+    border: 2px solid #b0b2b0;
+    border: 2px solid transparent;
+}
+
+.right-line-hidden {
+    width: 100px;
+    height: 0px;
+    border: 2px solid #b0b2b0;
+    border: 2px solid transparent;
+}
+
+.active {
+    .circle_container {
+        .circle {
+            border: 2px solid #54bdd0 !important;
+        }
+    }
+
+    .title {
+        color: $color_2;
+    }
+}
+
+.active-line {
+    border: 2px solid #54bdd0 !important;
+}
+
+.progress-content {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.btn-previous {
+    color: $color_3;
+    border: 1px solid #dedede;
+}
+
+.btn-next {
+    background-color: $background-color_1;
+    color: $color_3;
+    border: 1px solid #54bdd0;
+}
